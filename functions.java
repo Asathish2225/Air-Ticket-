@@ -7,12 +7,16 @@ public class functions extends Air_Ticket{
         show_flight_details();
         System.out.println("Enter number of tickets: ");
         passenger_count[i]=sc.nextInt();
+        if(passenger_count[i]<available_tickets){
         passenger_id[i]=i+1;
         System.out.println("Booked Successfully!");
         updateAdd();
         show_ticket();
         show_flight_details();
         i++;
+        } else{
+            System.out.println("Not Enough tickets");
+        }
     }
 
     void  Cancel_ticket(){
